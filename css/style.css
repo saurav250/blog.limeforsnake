@@ -282,6 +282,29 @@ section {
     }
 }
 
+/* --- Note Box --- */
+.note-box {
+    background: #F8E0E6; /* Brighter Blush Pink */
+    border-left: 6px solid #722F37; /* Wine Accent Border */
+    border-radius: 8px;
+    padding: 20px 25px;
+    margin: 0 auto 2.5rem auto;
+    max-width: 95%;
+    box-shadow: 0 5px 15px rgba(74, 14, 22, 0.1);
+}
+
+.note-box h3 {
+    color: #4A0E16;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.note-box p {
+    color: #2E1A1E;
+    font-size: 1.05rem;
+    margin-bottom: 0; /* Override default p margin */
+}
+
 /* --- 7. PREVIEW CARD GRID STYLES (For Poetry/Blogs) --- */
 .preview-grid {
     display: grid;
@@ -307,6 +330,21 @@ section {
 .preview-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 35px rgba(74, 14, 22, 0.2);
+}
+
+/* Special styles for the 'Coming Soon' placeholder card */
+.preview-card.coming-soon {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 280px;
+    opacity: 0.7;
+    cursor: default; /* It's not a link */
+}
+
+.preview-card.coming-soon:hover {
+    transform: none; /* No hover effect */
+    box-shadow: 0 10px 20px rgba(74, 14, 22, 0.1);
 }
 
 .preview-card-img {
