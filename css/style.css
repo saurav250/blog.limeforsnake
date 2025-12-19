@@ -380,3 +380,57 @@ section {
 html {
     scroll-behavior: smooth;
 }
+@media (max-width: 768px) {
+
+    /* 1. Fix the "Squished" Content Cards */
+    .intro-section .content-card {
+        flex-direction: column; /* Stack Image on top of Text */
+        height: auto; /* Let the card grow as tall as it needs */
+    }
+
+    /* 2. Fix the Even cards (Poetry section) */
+    /* By default, you had these reversed. We need to un-reverse them 
+       so they stack normally (Image Top, Text Bottom) on phones. */
+    .intro-section:nth-of-type(even) .content-card {
+        flex-direction: column; 
+        border-right: 1px solid #C6B3B6; /* Reset the border style */
+        border-left: 6px solid #722F37;  /* Keep the consistent left accent */
+    }
+
+    /* 3. Fix the Image Sizing */
+    .image-container {
+        width: 100%;       /* Full width of the phone */
+        height: 250px;     /* Fixed height so it doesn't disappear or get huge */
+        min-height: 250px;
+    }
+
+    /* 4. Fix the Text Padding */
+    .intro-section .text-box {
+        padding: 20px; /* Reduce padding so text has more room */
+        width: 100%;
+    }
+
+    /* 5. Fix the Header/Navbar */
+    .header-inner {
+        flex-direction: column; /* Stack Logo on top of Links */
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 20px;        /* Reduce gap between links */
+        flex-wrap: wrap;  /* Allow links to break into two lines if needed */
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    /* 6. Fix the Giant Title */
+    .site-title h1 {
+        font-size: 2.5rem; /* Shrink from 4.5rem to fit phone screens */
+    }
+    
+    .site-title {
+        padding: 2rem 1rem; /* Less empty space around title */
+    }
+}
