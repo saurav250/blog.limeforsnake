@@ -6,8 +6,6 @@ Welcome to the source code for my personal website, a tiny digital laboratory wh
 
 **Check it out live!** -> [https://saurav250.github.io/blog.limeforsnake/](https://saurav250.github.io/blog.limeforsnake/)
 
-![A screenshot of the website's blog section card](./images/blogs1.jpg)
-
 ## About This Project
 
 This website is my corner of the internet. It's a space where my two passions, coding and writing, come together. By day, I'm a student and developer, but I'm a writer in every breath. This project is my attempt to build something beautiful out of the void, using both lines of code and lines of verse.
