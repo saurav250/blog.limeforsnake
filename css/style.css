@@ -1,0 +1,341 @@
+/* --- THEME: Vintage Wine & Rose Gold --- */
+
+/* 1. The Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* 2. Page Background */
+body {
+    /* Dusty Rose background - distinct, warm color */
+    background-color: #D8C3C8; 
+    color: #2E1A1E; /* Very dark plum for text */
+    line-height: 1.6;
+    overflow-x: hidden; /* Important for the star animation */
+}
+
+/* 3. Header & Navigation */
+.site-header {
+    background: #4A0E16; /* Deep Merlot */
+    border-bottom: 2px solid #C5A065; /* Gold Accent */
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(74, 14, 22, 0.95); /* Semi-transparent Merlot */
+    backdrop-filter: blur(5px);
+}
+
+.logo img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid #C5A065; /* Gold border */
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: rotate(360deg) scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+
+.nav-links a,
+.nav-links a:link,
+.nav-links a:visited {
+    color: #F3E5E8; /* Pale pink text */
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #C5A065; /* Gold on hover */
+}
+
+.site-title {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #5D1923; /* Lighter Wine */
+    border-bottom: 5px solid #C5A065;
+}
+
+.site-title h1 {
+    font-size: 4.5rem;
+    margin-bottom: 0.5rem;
+    color: #F3E5E8; 
+    text-shadow: 2px 2px 0px #2E1A1E;
+}
+
+.site-title .site-quote {
+    font-size: 1.3rem;
+    color: #C5A065; /* Gold Quote */
+    font-style: italic;
+}
+
+/* 4. Main Content & Cards */
+main {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+.content-card {
+    /* CARD COLOR: Soft Blush Pink (Not White) */
+    background: #EEDADB; 
+    border-radius: 10px;
+    border: 1px solid #C6B3B6;
+    border-left: 6px solid #722F37; /* Wine Accent Border */
+    box-shadow: 0 10px 30px rgba(74, 14, 22, 0.15); /* Purple/Reddish shadow */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    min-width: 300px;
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(74, 14, 22, 0.25);
+}
+.content-card:hover .card-title {
+    /* Optional: Make the text color slightly richer */
+    color: #4A0E16; 
+    
+    /* The Glow: Multiple shadows layered together */
+    text-shadow: 
+        0 0 5px rgba(197, 160, 101, 0.6),   /* Inner tight gold glow */
+        0 0 15px rgba(197, 160, 101, 0.4),  /* Middle soft halo */
+        0 0 25px rgba(197, 160, 101, 0.2);  /* Wide outer spread */
+}
+.content-card:hover .text-box p {
+    text-shadow: 0 0 1px rgba(197, 160, 101, 0.5); /* Very subtle gold stroke */
+}
+
+/* Layout logic (Keep same as before) */
+.intro-section .content-card {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    padding: 0;
+}
+
+.intro-section:nth-of-type(even) .content-card {
+    flex-direction: row-reverse;
+    border-left: 1px solid #C6B3B6; 
+    border-right: 6px solid #722F37;
+}
+
+.intro-section .text-box {
+    padding: 30px;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro-section .card-title {
+    font-size: 2rem;
+    color: #4A0E16; /* Wine color title */
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #C5A065; /* Gold underline */
+    padding-bottom: 10px;
+    display: inline-block;
+    transition: text-shadow 0.4s ease, color 0.3s ease;
+}
+
+.intro-section .text-box p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #2E1A1E;
+}
+
+/* Overlay Logic */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(74, 14, 22, 0.6); /* Wine overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.overlay-text {
+    color: #F3E5E8;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid #C5A065; /* Gold border */
+    padding: 10px 20px;
+    background: rgba(0,0,0,0.2);
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.image-container:hover .section-img {
+    transform: scale(1.1);
+}
+
+.section-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* 5. Footer */
+.site-footer-bottom {
+    background-color: #2E0B0F; /* Very dark wine */
+    color: #F3E5E8;
+    padding: 3rem 20px;
+    text-align: center;
+    border-top: 4px solid #C5A065;
+}
+
+.footer-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #C5A065;
+}
+
+.footer-content p {
+    margin-bottom: 1.5rem;
+    color: #D8C3C8;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    color: #F3E5E8;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border: 1px solid #C5A065;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #C5A065;
+    border-color: #C5A065;
+    color: #2E0B0F;
+}
+
+/* --- 6. MOUSE TRAIL STAR STYLES --- */
+.star {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #c5656f; /* Gold Stars */
+    border-radius: 50%;
+    pointer-events: none; /* Mouse clicks go through them */
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px #c56575, 0 0 20px #ff00c3; /* Glow effect */
+    animation: fadeOut 0.8s linear forwards;
+    z-index: 9999;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.2);
+    }
+}
+
+/* --- 7. PREVIEW CARD GRID STYLES (For Poetry/Blogs) --- */
+.preview-grid {
+    display: grid;
+    /* Creates responsive columns: they will be at least 300px wide, 
+       and the grid will fit as many as it can per row. */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.preview-card {
+    background: #EEDADB; /* Soft Blush Pink from theme */
+    border-radius: 10px;
+    border: 1px solid #C6B3B6;
+    box-shadow: 0 10px 20px rgba(74, 14, 22, 0.1);
+    overflow: hidden;
+    text-decoration: none; /* Remove underline from link */
+    color: #2E1A1E; /* Dark plum text */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.preview-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(74, 14, 22, 0.2);
+}
+
+.preview-card-img {
+    width: 100%;
+    height: 200px; /* Fixed height for a uniform look */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+}
+
+.preview-card-text {
+    padding: 20px;
+    flex-grow: 1; /* Ensures the text area fills the remaining card space */
+    display: flex;
+    flex-direction: column;
+}
+
+.preview-card-title {
+    font-size: 1.5rem;
+    color: #4A0E16; /* Wine color title */
+    margin-bottom: 1rem;
+}
+
+.preview-card-meta {
+    font-size: 0.9rem;
+    color: #722F37;
+    margin-top: auto; /* Pushes the metadata to the bottom of the card */
+    font-style: italic;
+}
+
+.preview-card-meta .meta-label {
+    font-weight: bold;
+    font-style: normal;
+}
