@@ -11,7 +11,7 @@
 /* 2. Page Background */
 body {
     /* Dusty Rose background - distinct, warm color */
-    background-color: #D8C3C8; 
+    background-color: #d3a5b0; 
     color: #2E1A1E; /* Very dark plum for text */
     line-height: 1.6;
     overflow-x: hidden; /* Important for the star animation */
@@ -338,4 +338,7 @@ section {
 .preview-card-meta .meta-label {
     font-weight: bold;
     font-style: normal;
+}
+html {
+    scroll-behavior: smooth;
 }
