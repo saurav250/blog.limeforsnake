@@ -1,8 +1,10 @@
 # Lime For Snake - A Digital Sanctuary
 
+> A digital sanctuary and personal blog for Lime For Snake, built with vanilla HTML, CSS, and JavaScript.
+
 Welcome to the source code for my personal website, a tiny digital laboratory where I get to experiment with code and share my verse. This site serves as a living portfolio for my writings, from technical blog posts to personal poetry.
 
-**Check it out live!** (You can add your deployment link here later)
+**Check it out live!** -> [https://saurav250.github.io/blog.limeforsnake/](https://saurav250.github.io/blog.limeforsnake/)
 
 ![A screenshot of the website's blog section card](./images/blogs1.jpg)
 
@@ -35,10 +37,10 @@ To run this project locally, simply clone the repository and open the `index.htm
 
 ```bash
 # Clone this repository
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/saurav250/blog.limeforsnake.git
 
 # Navigate to the project directory
-cd your-repo-name
+cd blog.limeforsnake
 
 # Open index.html in your browser
 ```
